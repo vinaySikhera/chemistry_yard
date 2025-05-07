@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Navbar from '../Navbar/page';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,10 +14,15 @@ const Login = () => {
     console.log({ email, password, rememberMe });
   };
 
+
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <>
+    <Navbar/>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-md bg-white p-8 rounded shadow">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+       
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"
@@ -58,6 +64,8 @@ const Login = () => {
         </form>
       </div>
     </div>
+    </>
+  
   );
 };
 
