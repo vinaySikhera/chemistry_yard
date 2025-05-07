@@ -23,7 +23,7 @@ export default function Navbar() {
 
         {/* Buttons */}
         <div className="hidden md:flex items-center space-x-3">
-          <Link href="/Login">
+          <Link href="/login">
             <button className="bg-white text-[#41bfc3] font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">
               Login
             </button>

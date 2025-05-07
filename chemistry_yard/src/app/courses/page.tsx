@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Navbar from "../Navbar/page";
+import Footer from "../Footer/page";
 const page = () => {
     return (
         <>
+         <Navbar />
             <div className='relative bg-cover bg-center bg-no-repeat h-[40vh] w-full' style={{ backgroundImage: "url('/images/course.jpg')" }}>
                 <div className='absolute inset-0 bg-black opacity-50'></div>
                 <div className='absolute  inset-0 flex items-center justify-center bottom-1/2 '>
@@ -12,7 +14,7 @@ const page = () => {
                 {/* this section responsive also  */}
                 <div className='absolute inset-0 flex flex-col items-center justify-center md:flex-row top-1/2  gap-4 text-white text-lg md:text-2xl font-bold p-4'>
                     <select name="" id="" className='cursor-pointer px-4 py-2 bg-white text-black rounded-md w-[80%] md:w-auto'>
-                        <option  value="">Select Course</option>
+                        <option value="">Select Course</option>
                         <option value="1">Course 1</option>
                         <option value="2">Course 2</option>
                         <option value="3">Course 3</option>
@@ -142,6 +144,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
+             <Footer />
         </>
     )
 }
