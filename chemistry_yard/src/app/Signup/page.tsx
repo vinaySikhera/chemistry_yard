@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
-
 const Signup = () => {
   const [form, setForm] = useState({
     name: '',
@@ -26,7 +25,7 @@ const Signup = () => {
     // TODO: Handle signup logic here
     console.log('Signup Data:', form);
   };
-
+  // DEEA-EB5F
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-md bg-white p-8 rounded shadow">
