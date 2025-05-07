@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react'
 import { GoEyeClosed } from "react-icons/go";
 import { RxEyeOpen } from "react-icons/rx";
 import { useState } from 'react';
+=======
+'use client'
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Navbar from '../Navbar/page';
+>>>>>>> 5757a6b92479cb9a17e57245c219a8b37bf49f63
 
 export default function Page() {
   const [eye, setEye] = useState(false);
@@ -21,6 +28,7 @@ export default function Page() {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     console.log('Form submitted:', { email, password , remember });
     const response = fetch('http://localhost:3000/api/Login', {
       method: 'POST',
@@ -57,6 +65,47 @@ export default function Page() {
           <div className=' mb-4'>
             <label htmlFor="name">Email
               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} name='email' placeholder='enter your email' className='border-2 border-gray-300 rounded-md p-2 w-full' />
+=======
+    // TODO: Handle login logic here
+    console.log({ email, password, rememberMe });
+  };
+
+
+
+  return (
+    <>
+    <Navbar/>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="w-full max-w-md bg-white p-8 rounded shadow">
+        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+       
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          {/* Remember Me & Forgot Password */}
+          <div className="flex items-center justify-between text-sm">
+            <label className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                className="form-checkbox"
+                checked={rememberMe}
+                onChange={() => setRememberMe(!rememberMe)}
+              />
+              <span>Remember Me</span>
+>>>>>>> 5757a6b92479cb9a17e57245c219a8b37bf49f63
             </label>
           </div>
           <div className="relative mb-4">
@@ -97,6 +146,13 @@ export default function Page() {
         </form>
       </div>
     </div>
+<<<<<<< HEAD
   </div>
 }
+=======
+    </>
+  
+  );
+};
+>>>>>>> 5757a6b92479cb9a17e57245c219a8b37bf49f63
 
